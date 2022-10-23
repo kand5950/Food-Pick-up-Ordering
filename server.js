@@ -36,8 +36,8 @@ app.use(bodyParser.urlencoded({ extended: true }));
 
 // Separated Routes for each Resource
 // Note: Feel free to replace the example routes below with your own
-const userApiRoutes = require('./routes/users-api');
-const widgetApiRoutes = require('./routes/widgets-api');
+const userCartRoutes = require('./routes/user_cart');
+const userConfirmationRoutes = require('./routes/user_confirmation');
 const restuarantsRoutes = require('./routes/restuarants')
 const usersRoutes = require('./routes/users');
 const usersLoginRoutes = require('./routes/users_login');
@@ -47,8 +47,8 @@ const homepageRoutes = require('./routes/homepage');
 // Mount all resource routes
 // Note: Feel free to replace the example routes below with your own
 // Note: Endpoints that return data (eg. JSON) usually start with `/api`
-app.use('/api/users', userApiRoutes);
-app.use('/api/widgets', widgetApiRoutes);
+app.use('/users_cart', userCartRoutes);
+app.use('/user_confirmation', userConfirmationRoutes);
 app.use('/resuarants', restuarantsRoutes);
 app.use('/users', usersRoutes);
 app.use('/users_login', usersLoginRoutes);
