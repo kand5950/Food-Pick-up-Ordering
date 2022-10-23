@@ -47,9 +47,9 @@ const homepageRoutes = require('./routes/homepage');
 // Mount all resource routes
 // Note: Feel free to replace the example routes below with your own
 // Note: Endpoints that return data (eg. JSON) usually start with `/api`
-app.use('/users_cart', userCartRoutes);
+app.use('/user_cart', userCartRoutes);
 app.use('/user_confirmation', userConfirmationRoutes);
-app.use('/resuarants', restuarantsRoutes);
+app.use('/restuarants', restuarantsRoutes);
 app.use('/users', usersRoutes);
 app.use('/users_login', usersLoginRoutes);
 app.use('/users_logout', usersLogoutRoutes);
