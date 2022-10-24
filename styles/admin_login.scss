@@ -1,0 +1,29 @@
+.input-field {
+  width: 500px;
+  margin: 1em;
+}
+.btn {
+ margin: 1em;
+ display:flex;
+ position: relative;
+    left: 50px;
+}
+.form-inline{
+  flex-direction: column;
+    padding-top: 20em;
+
+}
+.form-inline label{
+  padding-top: 20px;
+}
+
+.btn-primary {
+  color: #fff;
+  background-color: black;
+  border-color: white;
+}
+.h3, h3 {
+  font-size: 1.75rem;
+  position: relative;
+  left: 60px;
+}
