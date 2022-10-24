@@ -8,9 +8,14 @@
     integrity="sha384-GJzZqFGwb1QTTN6wy59ffF1BuGJpLSa9DkKMp0DgiMDm4iYMj70gZWKYbI706tWS" crossorigin="anonymous" />
   <link rel="stylesheet" href="/vendor/normalize-4.1.1.css" />
   <link rel="stylesheet" href="/vendor/border-box.css" />
-  <link rel="stylesheet" href="/styles/nav.scss" type="text/css" />
+  <link rel="stylesheet" href="/styles/nav.css" type="text/css" />
+  <link rel="stylesheet" href="/styles/menu.css" type="text/css" />
+ 
+  <!-- Google fonts -->
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Bungee&family=Source+Sans+Pro:ital,wght@1,300;1,600&display=swap" rel="stylesheet">
   <script src="/vendor/jquery-3.0.0.js"></script>
   <script defer src="/scripts/app.js"></script>
+  
 
   <head>
     <title>Menu</title>
@@ -20,7 +25,38 @@
   </head>
 <body>
   <header><%- include('partials/_header') %></header>
-  <p>SAMPLE TEXT1</p>
+  <section id="menu">
+    <h1>CHOOSE & ENJOY</h1>
+    <p>hello1</p>
+    <p>hello2</p>
+    <div id="items">
+      <div id class="card">
+        <img srs="/public/images/hamburger-veggie-11645691701h30x1gjd3b.png" alt="" />
+        <h6>LOREM IPSUM</h6>
+        <div>
+          hello3
+        </div>
+        <a href="#">ORDER NOW</a>
+      </div>
+      <div id class="card">
+        <img srs="" alt="" />
+        <h6>LOREM IPSUM</h6>
+        <div>
+          hello3
+        </div>
+        <a href="#">ORDER NOW</a>
+      </div>
+      <div id class="card">
+        <img srs="" alt="" />
+        <h6>LOREM IPSUM</h6>
+        <div>
+          hello3
+        </div>
+        <a href="#">ORDER NOW</a>
+      </div>
+    </div>
+  </section>
+    
 </body>
   <!-- Bootstrap JS -->
   <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
