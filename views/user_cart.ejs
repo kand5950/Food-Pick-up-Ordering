@@ -9,6 +9,7 @@
   <link rel="stylesheet" href="/vendor/normalize-4.1.1.css" />
   <link rel="stylesheet" href="/vendor/border-box.css" />
   <link rel="stylesheet" href="/styles/nav.css" type="text/css" />
+  <link rel="stylesheet" href="/styles/user_cart.css" type="text/css" />
   <script src="/vendor/jquery-3.0.0.js"></script>
   <script defer src="/scripts/app.js"></script>
 
@@ -20,7 +21,17 @@
   </head>
   <body>
     <header><%- include('partials/_header') %></header>
-    <p>SAMPLE TEXT4</p>
+    <main>
+      <h1 class="header1">Order Summary</h1>
+      <h2 class="header4">Estimate time</h2>
+      <h2 class="header2">Placeholder for list of items</h2>
+      <!-- <div> items will go into here </div> -->
+        </div>
+        <h2 class="header3">Total</h2>
+        <!-- <div> will calculate total here</div> -->
+        <button type="submit" class="btn btn-primary">Place Order!</button>
+      </form>
+    </main>
   </body>
   <!-- Bootstrap JS -->
   <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
