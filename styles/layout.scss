@@ -3,20 +3,17 @@
  * https://css-tricks.com/international-box-sizing-awareness-day/
  * Do not modify these two selectors, please
  */
- html {
-    box-sizing: border-box;
-  }
-  *, *:before, *:after {
-    box-sizing: inherit;
-  }
+ // See: https://sass-lang.com/
+
+body {
+    background-color: orange;
   
-  /*
-   * Global layout stuff
-   */
+    h1 {
+      color: #244751;
+    }
   
-  body {
-    color: #545149;
-    background-color: #f4f1ec;
-    font-size: 24px;
-    font-family: Source Sans Pro, sans-serif;
-  }
+    input.form-control {
+      width: 300px;
+      margin: 1em;
+    }
+}
