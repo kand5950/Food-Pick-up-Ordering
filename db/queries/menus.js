@@ -2,15 +2,15 @@ const db = require('../connection');
 
 const getItems = () => {
     return db.query("SELECT * FROM items")
-      .then(data => {
-        return data.rows;
+      .then(items => {
+        return items.rows;
       })
   }
 
 const getItem = (id) => {
     return db.query("SELECT * FROM items where id = $1", [id])
-    .then(data => {
-        return data.rows[0];
+    .then(items => {
+        return items.rows[0];
     })
 }
 
