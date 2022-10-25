@@ -108,3 +108,117 @@
     transform: scale(1.15);
     background-color: green;
 }
+
+#cart {
+    display: flex;
+    flex-direction: column;
+    height: auto;
+    width: 90%;
+    background-size: 100% 100%;
+    padding: 40px 80px;
+    align-items: center;
+    justify-content: center;
+    margin-left: 240px;
+    font-family: Source sans pro, sans-serif;
+}
+#cart .cart-header {
+    font-weight: bold;
+    font-size: 1.30em;
+    color: black;
+}
+
+#cart .cart-column {
+    display: flex;
+    align-items: center;
+    border-bottom: 1px solid blue;
+    margin-right: 1.4em;
+    padding-bottom: 10px;
+    margin-top: 10px;
+}
+
+#cart .cart-row {
+    display: flex;
+}
+
+#cart .cart-item {
+    width: 50%;
+}
+
+#cart .cart-price {
+    width: 20%;
+    font-size: 1em;
+    color: black;
+}
+
+.cart-quantity {
+    width: 37%;
+}
+
+#cart .cart-item-title {
+    color: black;
+    margin-left: .5em;
+    font-size: 1em;
+}
+
+#cart .cart-item-image {
+    width: 77px;
+    height: auto;
+    border-radius: 11px;
+}
+
+#cart .btn-danger {
+    color: white;
+    background-color: red;
+    border: none;
+    border-radius: .4em;
+    font-weight: bold;
+}
+
+#cart .btn-danger:hover {
+    background-color: darkred;
+}
+
+#cart .cart-quantity-input {
+    height: 34px;
+    width: 50px;
+    border-radius: 5px;
+    border: 1px solid blue;
+    background-color: lightgray;
+    color: black;
+    padding: 0;
+    text-align: center;
+    font-size: 1.2em;
+    margin-right: 25px;
+}
+
+#cart .cart-row:last-child {
+    border-bottom: 1px solid blue;
+}
+
+#cart .cart-row:last-child .cart-column {
+    border: none;
+}
+
+#cart .cart-total {
+    text-align: end;
+    margin-top: 11px;
+    margin-right: 11px;
+}
+
+#cart .cart-total-title {
+    font-weight: bold;
+    font-size: 1.7em;
+    color: black;
+    margin-right: 20px;
+}
+
+#cart .cart-total-price {
+    color: black;
+    font-size: 1.2em;
+}
+
+#cart .btn-purchase {
+    display: block;
+    margin: 40px auto 80px auto;
+    font-size: 1.70em;
+}
