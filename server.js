@@ -56,6 +56,7 @@ app.use('/users_login', usersLoginRoutes);
 app.use('/users_logout', usersLogoutRoutes);
 app.use('/homepage', homepageRoutes)
 app.use('/admin_login', adminLoginRoutes);
+app.use('/', homepageRoutes);
 
 // Note: mount other resources here, using the same pattern above
 
