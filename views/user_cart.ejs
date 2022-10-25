@@ -11,7 +11,10 @@
   <link rel="stylesheet" href="/styles/nav.css" type="text/css" />
   <link rel="stylesheet" href="/styles/user_cart.css" type="text/css" />
   <script src="/vendor/jquery-3.0.0.js"></script>
-  <script defer src="/scripts/app.js"></script>
+
+
+  <script>const order = '<%- JSON.stringify(order) %>'</script>
+  <script src="/scripts/user_cart"></script>
 
   <head>
     <title>Cart</title>
@@ -29,7 +32,7 @@
         </div>
         <h2 class="header3">Total</h2>
         <!-- <div> will calculate total here</div> -->
-        <button type="submit" class="btn btn-primary">Place Order!</button>
+        <button type="submit" class="btn btn-primary place-order">Place Order!</button>
       </form>
     </main>
   </body>
