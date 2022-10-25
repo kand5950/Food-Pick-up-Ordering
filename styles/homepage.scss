@@ -1,0 +1,85 @@
+#homepage .hero {
+    display: flex;
+    height: auto;
+    width: 90%;
+    padding: 40px 0px;
+    align-items: center;
+    justify-content: center;
+    font-family: Source sans pro, sans-serif;
+}
+
+#homepage .details {
+    display: flex;
+    flex-direction: column;
+    height: auto;
+    width: 50%;
+    align-items: center;
+    justify-content: center;
+}
+
+#homepage .hero .details h2 {
+    display: flex;
+    font-size: 20px;
+    margin: 8px 0;
+    width: 100%;
+    align-items: center;
+    justify-content: center;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+#homepage .hero h1 {
+    display: flex;
+    margin: 8px 0;
+    color: gray;
+    font-size: 40px;
+    letter-spacing: 2px;
+    width: 100%;
+    align-items: center;
+    justify-content: center;
+    font-family: Georgia, 'Times New Roman', Times, serif;
+}
+
+#homepage .hero .details h5{
+    display: flex;
+    margin: 8px 0;
+    font-size: 13px;
+    letter-spacing: 2px;
+    width: 100%;
+    align-items: center;
+    justify-content: center;
+    font-family: Georgia, 'Times New Roman', Times, serif
+}
+
+#homepage .hero .details .line{
+    display: flex;
+    height: 1px;
+    width: 300px;
+    margin: 8px 0;
+    background: #9999;
+
+}
+
+#homepage .hero .details a {
+    display:flex;
+    height:40px;
+    width: 150px;
+    margin-top: 10px;
+    margin-bottom: 20px;
+    color: #191919;
+    border-radius: 10px;
+    font-weight: bold;
+    text-decoration: none;
+    align-items: center;
+    justify-content: center;
+    border: 1px solid #191919;
+    transition: 1s
+}
+
+#homepage .hero .details a:hover{
+    background: #FFF;
+    transform: scale(1.1);
+    border: none;
+}
+
+
+
