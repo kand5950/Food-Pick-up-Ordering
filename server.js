@@ -39,7 +39,7 @@ app.use(bodyParser.urlencoded({ extended: true }));
 const userCartRoutes = require('./routes/user_cart');
 const userConfirmationRoutes = require('./routes/user_confirmation');
 const restuarantsRoutes = require('./routes/restuarants')
-const usersRoutes = require('./routes/users');
+const usersRoutes = require('./routes/users_menu');
 const usersLoginRoutes = require('./routes/users_login');
 const usersLogoutRoutes = require('./routes/users_logout');
 const homepageRoutes = require('./routes/homepage');
@@ -51,7 +51,7 @@ const adminLoginRoutes = require('./routes/admin_login');
 app.use('/user_cart', userCartRoutes);
 app.use('/user_confirmation', userConfirmationRoutes);
 app.use('/restuarants', restuarantsRoutes);
-app.use('/users', usersRoutes);
+app.use('/menu', usersRoutes);
 app.use('/users_login', usersLoginRoutes);
 app.use('/users_logout', usersLogoutRoutes);
 app.use('/homepage', homepageRoutes)
