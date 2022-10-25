@@ -5,9 +5,11 @@ const itemsHelper = require('../db/queries/menus')
 console.log(itemsHelper)
 
 router.get('/', (req, res) => {
-  itemsHelper.getItem(1).then(items => {
-    console.log(items);
-  res.render('user_menu', {items});
+  const templateVars = {};
+  itemsHelper.getItems().then(items => {
+    templateVars["menu"] = items;
+    console.log(templateVars);
+  res.render('user_menu', templateVars);
 })
 })
 

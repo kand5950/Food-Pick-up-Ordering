@@ -1,5 +1,8 @@
 // Client facing scripts here
 $(() => {
-    console.log("hello")
+    const userMenu = JSON.parse(menu)
+    for (let i in userMenu) {
+        console.log(userMenu[i]);
+    }
   });
   
