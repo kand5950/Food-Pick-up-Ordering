@@ -35,9 +35,40 @@ $(() => {
         updateCartIcon()
     });
 
+
+    function timeConverted(i) {
+        var number = i;
+        var hours = (number / 60);
+        var realhours = Math.floor(hours);
+        var minutes = (hours - realhours) * 60;
+        var realminutes = Math.round(minutes);
+        return realhours + " hour(s) & " + realminutes + " minute(s).";
+        }
+
     $('.checkout').on("click", function(event) {
-        console.log("clicked")
-        updateCartIcon()
+        
+        const userOrder = {};
+
+        let totalMins = 0;
+
+        for (let food of order) {
+            totalMins += Number(food.estimated_time)*order.length;
+        }
+
+        const estTime = timeConverted(totalMins);
+
+        userOrder['foods_ordered'] = order;
+        userOrder['estTime'] = estTime;
+        $.ajax({
+            url: '/user_confirmation',
+            method: "POST",
+            data: userOrder,
+            success: function(data){console.log(data)}
+
+        })
+
+
+
     })
 
     function updateCartIcon() {
