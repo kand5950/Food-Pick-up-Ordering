@@ -2,12 +2,12 @@
 $(() => {
     const userMenu = JSON.parse(menu)
     
-
+    order = [];
+    total = 0;
+    
     $(".card-block a").on("click", function(event) {
-        $(".show-cart table").empty();
-        console.log()
-        order = [];
-        total = 0;
+        $(".show-cart").empty();
+        
         for (let food of userMenu) {
             if(food.name === $(this).parent(".card-block").children(".card-title").text()) {
                 order.push({
