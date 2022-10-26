@@ -3,7 +3,7 @@ const router  = express.Router();
 const db = require('../db/connection');
 
 router.get('/', (req, res) => {
-  res.render('user_login', { user: [req.session.user_id]});
+  res.render('user_login', /*{ user: [req.session.user_id]}*/);
 });
 
 router.post('/', (req, res) => {
