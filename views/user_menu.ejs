@@ -35,17 +35,18 @@
     <p>hello2</p>
 
     <% for (let food in menu) { %>
-      <div id="items">
-      <div id class="cardss">
-        <img src="https://pngimg.com/uploads/burger_sandwich/burger_sandwich_PNG4135.png" alt="burgerz" />
-        <h5> <%= menu[food].name %> </h5>
-        <h6> <%= menu[food].description %></h6>
-        <div>
+      <div class="items">
+      <div class="cardss">
+        <img class="food-image" src="https://pngimg.com/uploads/burger_sandwich/burger_sandwich_PNG4135.png" alt="burgerz" />
+        <h5 class="food-item"><%= menu[food].name %></h5> 
+        <h6><%= menu[food].description %></h6>
+        <div class ="food-price"> 
           $<%= menu[food].price/100 %>.00
         </div>
         <button class="btn btn-primary shop-item-button" type="button">ADD TO CART</button>
       </div>
     <% } %>
+    </div>
     
   </section>
 <section id="cart">
@@ -81,7 +82,7 @@
     </div>
     <div class="cart-total">
         <strong class="cart-total-title">Total</strong>
-        <span class="cart-total-price">$17.99</span>
+        <span class="cart-total-price">$0</span>
     </div>
     <a class="btn btn-primary btn-purchase" href="/user_cart">Place order</a>
 </section>

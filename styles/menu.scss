@@ -32,7 +32,7 @@
 }
 
 
-#menu #items{
+#menu .items{
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -41,7 +41,7 @@
     margin-top: 20px;
 }
 
-#menu #items .cardss{
+#menu .items .cardss{
     display:flex;
     flex-direction: column;
     height: auto;
@@ -51,7 +51,7 @@
 
 }
 
-#menu #items .cardss img{
+#menu .items .cardss img{
     display: flex;
     height: 210px;
     width: 50%;
@@ -62,12 +62,12 @@
 
 }
 
-#menu #items .cardss img:hover{
+#menu .items .cardss img:hover{
     transform: scale(1.15);
     box-shadow: 0px 4px 10px 1px rgba(247, 241, 113, 1);
 }
 
-#menu #items .cardss h5{
+#menu .items .cardss h5{
     display: flex;
     width: 100%;
     height: auto;
@@ -79,7 +79,7 @@
 }
 
 
-#menu #items .cardss h6{
+#menu .items .cardss h6{
     display: flex;
     width: 100%;
     height: auto;
@@ -89,7 +89,7 @@
     justify-content: center;
 }
 
-#menu #items .cardss div{
+#menu .items .cardss div{
     display:flex;
     flex-wrap:wrap;
     font-size:17px;
@@ -102,7 +102,7 @@
     justify-content: center;
 }
 
-#menu #items .cardss a{
+#menu .items .cardss a{
     display: flex;
     height: 40px;
     width: 150px;
@@ -118,7 +118,7 @@
     transition:1s
 }
 
-#menu #items .cardss a:hover{
+#menu .items .cardss a:hover{
     transform: scale(1.15);
     background-color: green;
 }
