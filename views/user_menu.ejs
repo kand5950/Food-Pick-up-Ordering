@@ -29,7 +29,7 @@
   </head>
 <body>
   <header><%- include('partials/_header') %></header>
-  <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#cart">Cart</button><button class="clear-cart btn btn-danger">Clear Cart</button></div>
+  <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#cart">Cart(<span class="total-count"></span>)</button><button class="clear-cart btn btn-danger">Clear Cart</button></div>
   <!-- Main -->
   
 <div class="container">
@@ -71,7 +71,7 @@
       </div>
       <div class="modal-footer">
         <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
-        <button type="button" class="btn btn-primary">Order now</button>
+        <a class="btn btn-primary checkout" href="/user_confirmation">Order now</a>
       </div>
     </div>
   </div>

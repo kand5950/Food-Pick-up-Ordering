@@ -27,6 +27,15 @@ $(() => {
               
             
         })
+
+    $('.clear-cart').click(function() {
+        $(".show-cart").empty();
+        $(".show-cart").append(`<div>Total price: $0<span class="total-cart"></span></div>`);
+    });
+
+    $('.checkout').on("click", function(event) {
+        console.log("clicked")
+    })
        
 
 })
