@@ -4,6 +4,7 @@ $(() => {
     
     order = [];
     total = 0;
+    $(".total-count").html("0");
     
     $(".card-block a").on("click", function(event) {
         $(".show-cart").empty();
@@ -25,17 +26,27 @@ $(() => {
               };
               $(".show-cart").append(`<div>Total price: $${total}<span class="total-cart"></span></div>`);
               
-            
+              updateCartIcon()
         })
 
     $('.clear-cart').click(function() {
         $(".show-cart").empty();
-        $(".show-cart").append(`<div>Total price: $0<span class="total-cart"></span></div>`);
+        order.length=0;
+        updateCartIcon()
     });
 
     $('.checkout').on("click", function(event) {
         console.log("clicked")
+        updateCartIcon()
     })
+
+    function updateCartIcon() {
+        if (order.length) {
+          $(".total-count").html(order.length);
+        } else {
+          $(".total-count").html("0");
+        }
+      }
        
 
 })
