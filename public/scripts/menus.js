@@ -1,8 +1,8 @@
 // Client facing scripts here
 $(() => {
     const userMenu = JSON.parse(menu)
-    
-    
+
+
     $(".shop-item-button").on("click", function(event) {
         for (let food in userMenu) {
             console.log(userMenu[food])
@@ -105,7 +105,6 @@ function updateCartTotal() {
     total = Math.round(total * 100) / 100
     document.getElementsByClassName('cart-total-price')[0].innerText = '$' + total
 }
-    
+
 
   });
-  
