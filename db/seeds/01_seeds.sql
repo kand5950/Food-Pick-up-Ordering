@@ -3,6 +3,8 @@ VALUES('tommy', 'tommmy123@gmail.com', '$2a$10$FB/BOAVhpuLvpOREQVmvmezD4ED/.JBID
 ('robert', 'robert001@gmail.com', '$2a$10$FB/BOAVhpuLvpOREQVmvmezD4ED/.JBIDRh70tGevYzYzQgFId2u.', '967-1111'),
 ('harry', 'harry1@gmail.com', '$2a$10$FB/BOAVhpuLvpOREQVmvmezD4ED/.JBIDRh70tGevYzYzQgFId2u.', '967-1111');
 
+INSERT INTO admins (name, email, password, phone)
+VALUES('admin', 'admin@gmail.com', '$2a$10$FB/BOAVhpuLvpOREQVmvmezD4ED/.JBIDRh70tGevYzYzQgFId2u.', '967-1111');
 
 INSERT INTO items (
   name,

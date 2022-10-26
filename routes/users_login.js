@@ -3,7 +3,7 @@ const router  = express.Router();
 const db = require('../db/connection');
 
 router.get('/', (req, res) => {
-  res.render('user_login', { user: user_id[req.session.user_id]});
+  res.render('user_login', { user: [req.session.user_id]});
 });
 
 router.post('/', (req, res) => {
@@ -23,6 +23,6 @@ router.post('/', (req, res) => {
 });
 router.post('/logout', (req, res) =>{
   req.session = null
-  res.redirect('/')
+  res.redirect('/user_login')
 })
 module.exports = router;
