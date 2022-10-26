@@ -29,41 +29,52 @@
   </head>
 <body>
   <header><%- include('partials/_header') %></header>
-  <section id="menu">
-    <h1>CHOOSE & ENJOY</h1>
-    <p>hello1</p>
-    <p>hello2</p>
-
-    <% for (let food in menu) { %>
-      <div class="items">
-      <div class="cardss">
-        <img class="food-image" src="https://pngimg.com/uploads/burger_sandwich/burger_sandwich_PNG4135.png" alt="burgerz" />
-        <h5 class="food-item"><%= menu[food].name %></h5> 
-        <h6><%= menu[food].description %></h6>
-        <div class ="food-price"> 
-          $<%= menu[food].price/100 %>.00
-        </div>
-        <button class="btn btn-primary shop-item-button" type="button">ADD TO CART</button>
-      </div>
+  <!-- Main -->
+  
+<div class="container">
+  
+    <div class="row">
+      <% for (let food in menu) { %>
+      <div class="col">
+        <div class="card" style="width: 20rem;">
+  <img class="card-img-top" src="<%= menu[food].thumbnail_photo_url %>" alt="Card image cap">
+  <div class="card-block">
+    <h4 class="card-title"><%= menu[food].name %></h4>
+    <p class="card-description"><%= menu[food].description %></p>
+    <p class="card-text">$<%= menu[food].price/100 %>.00</p>
+    <a class="add-to-cart btn btn-primary">Add to cart</a>
+  </div>
+</div>
+    </div>
     <% } %>
+</div>
+
+</div>
+
+
+  
+ <!-- Modal -->
+<div class="modal fade" id="cart" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+  <div class="modal-dialog modal-lg" role="document">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title" id="exampleModalLabel">Cart</h5>
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+      <div class="modal-body">
+        <table class="show-cart table">
+          
+        </table>
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+        <button type="button" class="btn btn-primary">Order now</button>
+      </div>
     </div>
-    
-  </section>
-<section id="cart">
-    <h2 class="section-header">CART</h2>
-    <div class="cart-row">
-        <span class="cart-item cart-header cart-column">ITEM</span>
-        <span class="cart-price cart-header cart-column">PRICE</span>
-        <span class="cart-quantity cart-header cart-column">QUANTITY</span>
-    </div>
-    <div class="cart-items">
-    </div>
-    <div class="cart-total">
-        <strong class="cart-total-title">Total</strong>
-        <span class="cart-total-price">$0</span>
-    </div>
-    <a class="btn btn-primary btn-purchase" href="/user_cart">Place order</a>
-</section>
+  </div>
+</div> 
     
 </body>
   <!-- Bootstrap JS -->
