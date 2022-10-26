@@ -12,11 +12,11 @@ router.get('/', (req, res) => {
     console.log(templateVars);
   res.render('user_confirmation', templateVars);
 })
-}); 
+});
 
 router.post('/', (req, res) => {
   res.send(req.body)
-  console.log(req.body)
+  console.log(req.body.foods_ordered)
 })
 
 
