@@ -14,9 +14,10 @@ router.post('/', (req, res) => {
   .then((rows) => {
     const user = rows.rows[0]
      // set cookie
+    // placeholder: user[req.session.user_id]
     req.session.user_id = user.id
-    console.log(req.session.user_id)
-    res.redirect('/homepage');
+    console.log(user)
+    res.redirect('/restuarants');
   })
   .catch((err) => console.log(err))
 });
