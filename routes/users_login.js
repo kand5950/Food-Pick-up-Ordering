@@ -5,6 +5,7 @@ const db = require('../db/connection');
 router.get('/', (req, res) => {
   res.render('user_login');
 });
+
 router.post('/', (req, res) => {
   // get email from form
   const email = req.body.email
@@ -16,9 +17,12 @@ router.post('/', (req, res) => {
      // set cookie
     req.session.user_id = user.id
     console.log(req.session.user_id)
-    res.redirect('index');
+    res.redirect('/homepage');
   })
   .catch((err) => console.log(err))
 });
-
+router.post('/logout', (req, res) =>{
+  req.session = null
+  res.redirect('/user_login')
+})
 module.exports = router;
