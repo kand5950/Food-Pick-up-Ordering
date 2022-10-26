@@ -46,14 +46,17 @@ $(() => {
         }
 
     $('.checkout').on("click", function(event) {
-        
+
         const userOrder = {};
 
         let totalMins = 0;
 
         for (let food of order) {
-            totalMins += Number(food.estimated_time)*order.length;
+            console.log(food)
+            totalMins += Number(food.estimated_time);
         }
+        
+        
 
         const estTime = timeConverted(totalMins);
 

@@ -30,17 +30,20 @@ CREATE TABLE items (
   price INTEGER NOT NULL,
   estimated_time INTEGER NOT NULL,
   thumbnail_photo_url VARCHAR(255) NOT NULL
+  order_id INTEGER REFERENCES orders(id) ON DELETE CASCADE,
 );
 
 CREATE TABLE orders (
   id SERIAL PRIMARY KEY NOT NULL,
   admins_id INTEGER REFERENCES users(id) ON DELETE CASCADE,
   user_id INTEGER REFERENCES users(id) ON DELETE CASCADE,
-  item_id INTEGER REFERENCES items(id) ON DELETE CASCADE,
+  
   created_at TIMESTAMP,
   completed_at TIMESTAMP,
   accepted_at TIMESTAMP,
   total_price INTEGER NOT NULL,
   estimated_time VARCHAR(100)
 );
+
+
 

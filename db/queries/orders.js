@@ -2,16 +2,19 @@ const db = require('../connection');
 
 const getOrders = () => {
     return db.query("SELECT * FROM orders")
-      .then(order => {
-        return order.rows;
+      .then(orders => {
+        return orders.rows;
       })
   }
 
 const getOrder = (id) => {
     return db.query("SELECT * FROM orders where id = $1", [id])
-    .then(items => {
-        return items.rows[0];
+    .then(orders => {
+        return orders.rows[0];
     })
 }
+
+
+const addOrder = 
 
   module.exports = { getOrders, getOrder };

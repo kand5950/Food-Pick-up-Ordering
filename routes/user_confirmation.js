@@ -8,11 +8,18 @@ let order;
 router.get('/', (req, res) => {
   const templateVars = {};
   ordershelper.getOrders().then(order => {
-    templateVars["Orders"] = order;
+    templateVars["order"] = order;
     console.log(templateVars);
   res.render('user_confirmation', templateVars);
 })
 }); 
+
+router.post('/', (req, res) => {
+  res.send(req.body)
+  console.log(req.body)
+})
+
+
 
 
 
