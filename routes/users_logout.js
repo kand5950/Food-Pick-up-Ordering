@@ -1,8 +1,8 @@
 const express = require('express');
 const router  = express.Router();
 
-router.get('/', (req, res) => {
-  res.send('Log-out page');
-}); 
+router.get('/users_logout', (req, res) => {
+  res.redirect("/users_login");
+});
 
 module.exports = router;
