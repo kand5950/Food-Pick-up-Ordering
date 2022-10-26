@@ -18,84 +18,63 @@ VALUES (
   'A very tasty burger!',
   1000,
   10,
-  'placeholder img'
+  'https://media.istockphoto.com/photos/closeup-of-a-veggie-burger-with-copy-space-picture-id1331109186'
 ),
 (
   'Delicious Pizza',
   'An  extremely delicious pizza!',
   1000,
   10,
-  'placeholder img'
+  'https://media.istockphoto.com/photos/freshly-baked-pizza-with-arugula-tomato-red-onion-and-mozzarella-picture-id1279000076'
 ),
 (
   'Amazing Taco',
   'A pretty amazing taco!',
   1000,
   10,
-  'placeholder img'
-),
-(
-  'Sublime Shawarma wrap',
-  'This wrap is simply sublime!',
-  1000,
-  10,
-  'placeholder img'
+  'https://media.istockphoto.com/photos/barbecue-taco-picture-id1269723824'
 ),
 (
   'Cola-Coco',
   'Cold pop',
   300,
   5,
-  'url'
+  'https://media.istockphoto.com/photos/isolated-chilled-coca-cola-picture-id458120031?s=612x612'
 ),
 (
   'Pepsi',
   'Cold pop',
   300,
   5,
-  'url'
+  'https://media.istockphoto.com/photos/pepsi-can-with-water-droplets-picture-id459396911'
 ),
 (
   'Root Beer',
   'Cold Pop',
   300,
   5,
-  'url'
-),
-(
-  'Coffee',
-  'Hot beverage',
-  500,
-  7,
-  'url'
+  'https://media.istockphoto.com/photos/frozen-dark-stout-beer-float-picture-id537639977?s=612x612'
 ),
 (
   'Fries',
   'Small cut thin potatoes fried',
   400,
   7,
-  'url'
+  'https://media.istockphoto.com/photos/french-fries-picture-id852412726?s=612x612'
 ),
 (
   'Wedges',
   'Potatoes cut and fried',
   600,
   8,
-  'url'
-),
-(
-  'Chips',
-  'Snack',
-  200,
-  2,
-  'url'
+  'https://media.istockphoto.com/photos/potato-wedges-baked-with-rosemary-fast-food-picture-id1182303795'
 ),
 (
   'Poutine',
   'Fries with gravy',
   700,
   9,
-  'url'
+  'https://media.istockphoto.com/photos/classic-french-canadian-poutine-picture-id154959976'
 );
 
 
