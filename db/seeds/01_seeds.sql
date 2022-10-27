@@ -39,14 +39,14 @@ VALUES (
   'Cold pop',
   300,
   5,
-  'https://media.istockphoto.com/photos/isolated-chilled-coca-cola-picture-id458120031?s=612x612'
+  'https://media.istockphoto.com/photos/ice-coffee-in-a-tall-glass-over-and-coffee-beans-on-a-old-rustic-picture-id953291208?s=612x612'
 ),
 (
   'Pepsi',
   'Cold pop',
   300,
   5,
-  'https://media.istockphoto.com/photos/pepsi-can-with-water-droplets-picture-id459396911'
+  'https://media.istockphoto.com/photos/double-soft-drink-carbonated-fresh-food-soda-white-dish-on-wooden-picture-id828480064?s=612x612'
 ),
 (
   'Root Beer',

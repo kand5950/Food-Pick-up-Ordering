@@ -10,12 +10,12 @@
   <link rel="stylesheet" href="/vendor/border-box.css" />
   <link rel="stylesheet" href="/styles/nav.css" type="text/css" />
   <link rel="stylesheet" href="/styles/menu.css" type="text/css" />
- 
+
   <!-- Google fonts -->
   <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Bungee&family=Source+Sans+Pro:ital,wght@1,300;1,600&display=swap" rel="stylesheet">
   <script src="/vendor/jquery-3.0.0.js"></script>
-  
-  
+
+
 
     <title>Menu</title>
     <meta charset="UTF-7">
@@ -24,16 +24,16 @@
 
   <script>const menu = '<%- JSON.stringify(menu) %>'</script>
   <script src="/scripts/menus.js"></script>
-  
-  
+
+
   </head>
 <body>
   <header><%- include('partials/_header') %></header>
-  <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#cart">Cart(<span class="total-count"></span>)</button><button class="clear-cart btn btn-danger">Clear Cart</button></div>
+  <button type="button" class="btn btn-info" data-toggle="modal" data-target="#cart">Cart(<span class="total-count"></span>)</button><button class="clear-cart btn btn-danger">Clear Cart</button></div>
   <!-- Main -->
-  
+
 <div class="container">
-  
+
     <div class="row">
       <% for (let food in menu) { %>
       <div class="col">
@@ -53,7 +53,7 @@
 </div>
 
 
-  
+
  <!-- Modal -->
 <div class="modal fade" id="cart" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
   <div class="modal-dialog modal-lg" role="document">
@@ -66,17 +66,17 @@
       </div>
       <div class="modal-body">
         <table class="show-cart table">
-          
+
         </table>
       </div>
       <div class="modal-footer">
         <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
-        <a class="btn btn-primary checkout" href="/user_confirmation">Order now</a>
+        <a class="btn btn-success checkout" href="/user_confirmation">Order now</a>
       </div>
     </div>
   </div>
-</div> 
-    
+</div>
+
 </body>
   <!-- Bootstrap JS -->
   <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"
