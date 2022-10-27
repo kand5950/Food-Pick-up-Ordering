@@ -8,7 +8,7 @@ const getOrders = () => {
   }
 
 const getOrder = (id) => {
-    return db.query("SELECT * FROM orders where user_id = $1", [id])
+    return db.query("SELECT * FROM orders where id = $1", [id])
     .then(orders => {
         return orders.rows[0];
     })
@@ -19,9 +19,17 @@ const createOrder = (order) => {
   return db.query(`INSERT INTO orders (user_id, order_food, created_at, total_price, estimated_time)
   VALUES ($1, $2, $3, $4, $5) RETURNING *`, queryParams)
   .then(res => {
-    console.log(`results from create Order: ${res.rows}`)
     return res.rows[0];
   })
 };
+
+const updateOrder = (order) => {
+  const queryParams = [order.estimated_time];
+  return db.query(`UPDATE orders SET estimated_time = $1 RETURNING *`, queryParams)
+  .then(res => {
+    return res.rows[0];
+  })
+};
+
 
   module.exports = { getOrders, getOrder, createOrder };
