@@ -34,12 +34,30 @@
           <div class="card-body">
       <h2 class="header4">Estimate time: <%= order.estimated_time %>min</h2>
 
-      <h2 class="header2">Placeholder for list of items: <%= order.order_food %></h2>
+      <h2 class="header2">Items Ordered: <%= order.order_food %></h2>
 
         <h2 class="header3">Total: $<%= order.total_price %></h2>
           </div>
+    
+    <div class="wait-time-form">
+      <label for="waitTime">Estimated wait time: </label>
+      <select class="form-control" id="waitTime">
+        <option selected="selected" value="0">1 Minute</option>
+        <option value="1">5 Minutes</option>
+        <option value="2">10 Minutes</option>
+        <option value="3">15 Minutes</option>
+        <option value="4">20 Minutes</option>
+        <option value="5">25 Minutes</option>
+        <option value="6">30 Minutes</option>
+        <option value="7">35 Minutes</option>
+        <option value="8">40 Minutes</option>
+        <option value="9">45 Minutes</option>
+        <option value="10">50 Minutes</option>
+        <option value="11">55 Minutes</option>
+      </select>
           <button type="submit" class="button1">Accept Order</button>
         </div>
+        </form>
       </div>
       <div class="card">
         <div class="card-header" id="headingTwo">
