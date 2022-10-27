@@ -1,6 +1,6 @@
 <html lang="en">
 
-<head>
+
   <meta charset="utf-8" />
 
   <!-- CSS -->
@@ -11,26 +11,27 @@
   <link rel="stylesheet" href="/styles/nav.css" type="text/css" />
   <link rel="stylesheet" href="/styles/user_confirmation.css" type="text/css" />
   <script src="/vendor/jquery-3.0.0.js"></script>
-  <script src="/scripts/user_confirmation.js"></script>
 
   <head>
-    <title>Completed Order</title>
+    <title>Order summary</title>
     <meta charset="UTF-7">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script>const menu = '<%- JSON.stringify(order) %>'</script>
+    <script src="/scripts/user_confirmation"></script>
   </head>
   <body>
     <header><%- include('partials/_header') %></header>
-    <%= JSON.stringify(order) %>
     <main>
       <h1 class="header1">Order Summary</h1>
-      <h2 class="header4">Estimate time</h2>
-      <h2 class="header2">Placeholder for list of items</h2>
+      <h2 class="header4">Estimate time: <%= order.estimated_time %>min</h2>
+
+      <h2 class="header2">Placeholder for list of items: <%= order.order_food %></h2>
       <!-- <div> items will go into here </div> -->
         </div>
-        <h2 class="header3">Total</h2>
+        <h2 class="header3">Total: <%= order.total_price %></h2>
         <!-- <div> will calculate total here</div> -->
-        <button type="submit" class="btn btn-primary place-order">Place Order!</button>
+        <button type="submit" class="btn btn-primary place-order" href="/homepage">Back To shop</button>
       </form>
     </main>
   </body>
