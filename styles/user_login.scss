@@ -3,27 +3,60 @@
   margin: 1em;
 }
 .btn {
- margin: 1em;
- display:flex;
- position: relative;
-    left: 50px;
+   margin: 1em;
+    display: flex;
+    position: relative;
+    left: 240px;
+    display: flex;
+    height: 40px;
+    width: 150px;
+    margin-top: 10px;
+    margin-bottom: 20px;
+    color: gray;
+    border-radius: 10px;
+    font-weight: bold;
+    text-decoration: none;
+    align-items: center;
+    justify-content: center;
+    border: 1px solid #ffffff;
+    transition: 1s;
+    position: relative;
 }
 .form-inline{
   flex-direction: column;
     padding-top: 20em;
-
+   color:white;
+   background:#b3d7ff;
 }
 .form-inline label{
   padding-top: 20px;
 }
 
 .btn-primary {
-  color: #fff;
-  background-color: black;
+  color: gray;
+  background-color: transparent;
+  border-color: white;
+}
+.btn:hover{
+  background: linear-gradient(to bottom, #f6f6f6 5%, #ffffff 50%);
+  background-color: #f6f6f6;
+}
+.btn:active {
+  position: relative;
+  top: 1px;
   border-color: white;
 }
 .h3, h3 {
-  font-size: 1.75rem;
   position: relative;
-  left: 60px;
+  left: 269px;
+  top: 11px;
+  font-family: Georgia, "Times New Roman", Times, serif;
+  font-size: 47px;
+}
+
+@media (min-width: 576px) {
+.form-inline .form-control {
+  position: relative;
+    left: 210px;
+}
 }
