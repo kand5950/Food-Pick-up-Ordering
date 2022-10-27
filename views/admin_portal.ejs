@@ -11,8 +11,8 @@
   <link rel="stylesheet" href="/styles/nav.css" type="text/css" />
   <link rel="stylesheet" href="/styles/admin_portal.css" type="text/css" />
   <script src="/vendor/jquery-3.0.0.js"></script>
-  <script defer src="/scripts/app.js"></script>
-
+  <script src="/scripts/admins.js"></script>
+  <script>const menu = '<%- JSON.stringify(order) %>'</script>
   <head>
     <title>Incoming Orders</title>
     <meta charset="UTF-7">
@@ -21,10 +21,58 @@
   </head>
   <body>
     <header><%- include('partials/_header') %></header>
-    <div class="boxed">
-       box.
+    <div id="accordion">
+      <div class="card">
+        <div class="card-header" id="headingOne">
+          <h5 class="mb-0">
+            <button class="btn btn-link" data-toggle="collapse" data-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
+              Incoming Orders
+            </button>
+          </h5>
+        </div>
+    
+        <div id="collapseOne" class="collapse show" aria-labelledby="headingOne" data-parent="#accordion">
+          <div class="card-body">
+            h1 class="header1">Order Summary</h1>
+      <h2 class="header4">Estimate time: <%= order.estimated_time %>min</h2>
+
+      <h2 class="header2">Meals Ordered: <%= order.order_food %></h2>
+        </div>
+        <h2 class="header3">Total: $<%= order.total_price %></h2>
+          </div>
+        </div>
+      </div>
+      <div class="card">
+        <div class="card-header" id="headingTwo">
+          <h5 class="mb-0">
+            <button class="btn btn-link collapsed" data-toggle="collapse" data-target="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
+              Accepted Orders
+            </button>
+          </h5>
+        </div>
+        <div id="collapseTwo" class="collapse" aria-labelledby="headingTwo" data-parent="#accordion">
+          <div class="card-body">
+            Anim pariatur cliche reprehenderit, enim eiusmod high life accusamus terry richardson ad squid. 3 wolf moon officia aute, non cupidatat skateboard dolor brunch. Food truck quinoa nesciunt laborum eiusmod. Brunch 3 wolf moon tempor, sunt aliqua put a bird on it squid single-origin coffee nulla assumenda shoreditch et. Nihil anim keffiyeh helvetica, craft beer labore wes anderson cred nesciunt sapiente ea proident. Ad vegan excepteur butcher vice lomo. Leggings occaecat craft beer farm-to-table, raw denim aesthetic synth nesciunt you probably haven't heard of them accusamus labore sustainable VHS.
+          </div>
+        </div>
+      </div>
+      <div class="card">
+        <div class="card-header" id="headingThree">
+          <h5 class="mb-0">
+            <button class="btn btn-link collapsed" data-toggle="collapse" data-target="#collapseThree" aria-expanded="false" aria-controls="collapseThree">
+              Completed Orders
+            </button>
+          </h5>
+        </div>
+        <div id="collapseThree" class="collapse" aria-labelledby="headingThree" data-parent="#accordion">
+          <div class="card-body">
+            Anim pariatur cliche reprehenderit, enim eiusmod high life accusamus terry richardson ad squid. 3 wolf moon officia aute, non cupidatat skateboard dolor brunch. Food truck quinoa nesciunt laborum eiusmod. Brunch 3 wolf moon tempor, sunt aliqua put a bird on it squid single-origin coffee nulla assumenda shoreditch et. Nihil anim keffiyeh helvetica, craft beer labore wes anderson cred nesciunt sapiente ea proident. Ad vegan excepteur butcher vice lomo. Leggings occaecat craft beer farm-to-table, raw denim aesthetic synth nesciunt you probably haven't heard of them accusamus labore sustainable VHS.
+          </div>
+        </div>
+      </div>
     </div>
-    </div>
+    Accessibility
+    Be sure to add aria-expanded to t
   </body>
   <!-- Bootstrap JS -->
   <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
