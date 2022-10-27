@@ -8,6 +8,7 @@ const ordershelper = require('../db/queries/orders')
 let order;
 
 router.get('/', (req, res) => {
+  console.log("on get")
   const templateVars = {};
   const user_id = req.session.user_id
   order['customer'] = user_id
@@ -20,13 +21,14 @@ router.get('/', (req, res) => {
 });
 
 
-router.post('/', (req, res) => {
+router.post('/', (req, res) => { 
+  console.log("got here")
   console.log(Number(req.session.user_id))
   console.log(req.body)
   order = {user_id: req.session.user_id, order_food: req.body.foods_ordered.map(function(foods) { return foods["name"]}).join(", "), total_price: req.body.total, estimated_time: req.body.total}
   ordershelper.createOrder(order).then(order => {
-    console.log(order)
-  })
+    return res.send('success');
+  }).catch(error => error);
   // console.log(order.foods_ordered.map(function(foods) { return foods["name"]}).join(", ")) gets food from order
   
   
