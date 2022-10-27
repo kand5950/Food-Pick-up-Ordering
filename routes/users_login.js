@@ -17,7 +17,7 @@ router.post('/', (req, res) => {
      // set cookie
     req.session.user_id = user.id
     console.log(req.session.user_id)
-    res.redirect('/restuarants');
+    res.redirect('/menu');
   })
   .catch((err) => console.log(err))
 });
