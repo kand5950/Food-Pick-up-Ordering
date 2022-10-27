@@ -26,11 +26,9 @@
       <h1 class="header1">Order Summary</h1>
       <h2 class="header4">Estimate time: <%= order.estimated_time %>min</h2>
 
-      <h2 class="header2">Placeholder for list of items: <%= order.order_food %></h2>
-      <!-- <div> items will go into here </div> -->
+      <h2 class="header2">Meals Ordered: <%= order.order_food %></h2>
         </div>
         <h2 class="header3">Total: $<%= order.total_price %></h2>
-        <!-- <div> will calculate total here</div> -->
         <a type="submit" class="btn btn-primary place-order" href="/homepage">Back To shop</a>
       </form>
     </main>
