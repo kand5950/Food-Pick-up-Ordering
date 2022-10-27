@@ -24,9 +24,9 @@
     <header><%- include('partials/_header') %></header>
     <main>
       <h1 class="header1">Order Summary</h1>
-      <h2 class="header4">Estimate time <%= order.estimated_time %></h2>
+      <h2 class="header4">Estimate time: <%= order.estimated_time %>min</h2>
 
-      <h2 class="header2">Placeholder for list of items <%= order.item_id %></h2>
+      <h2 class="header2">Placeholder for list of items: <%= order.order_food %></h2>
       <!-- <div> items will go into here </div> -->
         </div>
         <h2 class="header3">Total: <%= order.total_price %></h2>
