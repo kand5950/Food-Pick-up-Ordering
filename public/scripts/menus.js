@@ -70,6 +70,13 @@ $(() => {
             success: function(data){console.log(data)}
 
         })
+        $.ajax({
+          url: '/admin_portal',
+          method: "POST",
+          data: userOrder,
+          success: function(data){console.log(data)}
+
+      })
 
 
 
