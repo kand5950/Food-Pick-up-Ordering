@@ -1,0 +1,94 @@
+/* menu section */
+body {
+  display: flex;
+  flex-direction: column;
+  padding-top: 80px;
+}
+
+.show-cart li {
+  display: flex;
+}
+.card {
+  background: #b3d7ff;
+  margin-bottom: 20px;
+}
+.card-img-top {
+  width: 200px;
+  height: 200px;
+  align-self: center;
+  border-radius: 50%;
+}
+.card-title {
+  margin-bottom: 0.75rem;
+  text-align: center;
+  font-family: Georgia, "Times New Roman", Times, serif;
+}
+.btn.clear-cart.btn.btn-danger{
+  margin: 1em;
+  display: flex;
+  position: relative;
+  left: 80em;
+  display: flex;
+  height: 40px;
+  width: 150px;
+  margin-top: 10px;
+  margin-bottom: 20px;
+  color: black;
+  border-radius: 10px;
+  font-weight: bold;
+  text-decoration: none;
+  align-items: center;
+  justify-content: center;
+  border: 1px solid #ffffff;
+  transition: 1s;
+  position: relative;
+}
+
+.btn.btn.btn-primary{
+  margin: 1em;
+  display: flex;
+  position: relative;
+  left: 75px;
+  display: flex;
+  height: 40px;
+  width: 150px;
+  margin-top: 10px;
+  margin-bottom: 20px;
+  color: black;
+  border-radius: 10px;
+  font-weight: bold;
+  text-decoration: none;
+  align-items: center;
+  justify-content: center;
+  border: 1px solid #ffffff;
+  transition: 1s;
+  position: relative;
+}
+.btn.btn.btn-info{
+  margin: 1em;
+  display: flex;
+  position: relative;
+  left: 80em;
+  top: 22px;
+  display: flex;
+  height: 40px;
+  width: 150px;
+  margin-top: 10px;
+  margin-bottom: 20px;
+  color: black;
+  border-radius: 10px;
+  font-weight: bold;
+  text-decoration: none;
+  align-items: center;
+  justify-content: center;
+  border: 1px solid #ffffff;
+  transition: 1s;
+  position: relative;
+  background: #0db90d;
+}
+p {
+  margin-top: 0;
+  margin-bottom: 1rem;
+  text-align: center;
+  font-family: Georgia, "Times New Roman", Times, serif;
+}

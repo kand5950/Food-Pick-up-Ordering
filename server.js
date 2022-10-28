@@ -3,11 +3,13 @@ require('dotenv').config();
 
 // Web server config
 const sassMiddleware = require('./lib/sass-middleware');
-const express = require('express');
-const morgan = require('morgan');
-
-const PORT = process.env.PORT || 8080;
-const app = express();
+const express        = require('express');
+const morgan         = require('morgan');
+const cookieSession  = require('cookie-session');
+const bodyParser     = require('body-parser');
+const twilio         = require('./twilio');
+const PORT           = process.env.PORT || 8080;
+const app            = express();
 
 app.set('view engine', 'ejs');
 
@@ -25,28 +27,44 @@ app.use(
   })
 );
 app.use(express.static('public'));
+app.use(cookieSession({
+  name: "session",
+  keys: ["id"]
+})
+);
+app.use(bodyParser.urlencoded({ extended: true }));
 
 // Separated Routes for each Resource
 // Note: Feel free to replace the example routes below with your own
-const userApiRoutes = require('./routes/users-api');
-const widgetApiRoutes = require('./routes/widgets-api');
-const usersRoutes = require('./routes/users');
+const userConfirmationRoutes = require('./routes/user_confirmation');
+const restuarantsRoutes = require('./routes/restuarants')
+const usersRoutes = require('./routes/users_menu');
+const usersLoginRoutes = require('./routes/users_login');
+const usersLogoutRoutes = require('./routes/users_logout');
+const homepageRoutes = require('./routes/homepage');
+const adminLoginRoutes = require('./routes/admin_login');
 
 // Mount all resource routes
 // Note: Feel free to replace the example routes below with your own
 // Note: Endpoints that return data (eg. JSON) usually start with `/api`
-app.use('/api/users', userApiRoutes);
-app.use('/api/widgets', widgetApiRoutes);
-app.use('/users', usersRoutes);
+app.use('/user_confirmation', userConfirmationRoutes);
+app.use('/restuarants', restuarantsRoutes);
+app.use('/menu', usersRoutes);
+app.use('/users_login', usersLoginRoutes);
+app.use('/users_logout', usersLogoutRoutes);
+app.use('/homepage', homepageRoutes)
+app.use('/admin_login', adminLoginRoutes);
+app.use('/', homepageRoutes);
+
 // Note: mount other resources here, using the same pattern above
 
 // Home page
 // Warning: avoid creating more routes in this file!
 // Separate them into separate routes files (see above).
 
-app.get('/', (req, res) => {
-  res.render('index');
-});
+// app.get('/', (req, res) => {
+//   res.render('index');
+// });
 
 app.listen(PORT, () => {
   console.log(`Example app listening on port ${PORT}`);

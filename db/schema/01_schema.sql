@@ -1,7 +1,49 @@
--- Drop and recreate Users table (Example)
-
 DROP TABLE IF EXISTS users CASCADE;
+DROP TABLE IF EXISTS items CASCADE;
+DROP TABLE IF EXISTS orders CASCADE;
+DROP TABLE IF EXISTS admins CASCADE;
+
+CREATE TABLE admins (
+  id SERIAL PRIMARY KEY NOT NULL,
+  name VARCHAR(255) NOT NULL,
+  email VARCHAR(255) NOT NULL,
+  password VARCHAR(255) NOT NULL,
+  phone VARCHAR(20) NOT NULL,
+  is_owner BOOLEAN NOT NULL DEFAULT TRUE
+);
+
+
 CREATE TABLE users (
   id SERIAL PRIMARY KEY NOT NULL,
-  name VARCHAR(255) NOT NULL
+  name VARCHAR(255) NOT NULL,
+  email VARCHAR(255) NOT NULL,
+  password VARCHAR(255) NOT NULL,
+  phone VARCHAR(20) NOT NULL,
+  is_owner BOOLEAN NOT NULL DEFAULT TRUE
 );
+
+CREATE TABLE orders (
+  id SERIAL PRIMARY KEY NOT NULL,
+  admin_id INTEGER REFERENCES admins(id) ON DELETE CASCADE,
+  user_id INTEGER REFERENCES users(id) ON DELETE CASCADE,
+  order_food TEXT,
+  created_at TIMESTAMP,
+  completed_at TIMESTAMP,
+  accepted_at TIMESTAMP,
+  total_price INTEGER NOT NULL,
+  estimated_time TEXT,
+  user_order_id INTEGER
+);
+
+CREATE TABLE items (
+  id SERIAL PRIMARY KEY NOT NULL,
+  name VARCHAR(255) NOT NULL,
+  description TEXT,
+  price INTEGER NOT NULL,
+  estimated_time INTEGER NOT NULL,
+  thumbnail_photo_url VARCHAR(255) NOT NULL,
+  order_id INTEGER REFERENCES orders(id) ON DELETE CASCADE
+);
+
+
+

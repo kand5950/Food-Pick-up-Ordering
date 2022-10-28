@@ -1,0 +1,85 @@
+<html lang="en">
+
+<head>
+  <meta charset="utf-8" />
+
+  <!-- CSS -->
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/css/bootstrap.min.css"
+    integrity="sha384-GJzZqFGwb1QTTN6wy59ffF1BuGJpLSa9DkKMp0DgiMDm4iYMj70gZWKYbI706tWS" crossorigin="anonymous" />
+  <link rel="stylesheet" href="/vendor/normalize-4.1.1.css" />
+  <link rel="stylesheet" href="/vendor/border-box.css" />
+  <link rel="stylesheet" href="/styles/nav.css" type="text/css" />
+  <link rel="stylesheet" href="/styles/admin_portal.css" type="text/css" />
+  <script src="/vendor/jquery-3.0.0.js"></script>
+
+  <head>
+    <title>Incoming Orders</title>
+    <meta charset="UTF-7">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="/scripts/admins.js"></script>
+  <script>const order = '<%- JSON.stringify(order) %>'</script>
+  </head>
+  <body>
+    <header><%- include('partials/_header') %></header>
+    <div id="accordion">
+      <div class="card">
+        <div class="card-header" id="headingOne">
+          <h5 class="mb-0">
+            <button class="btn btn-link" data-toggle="collapse" data-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
+              Incoming Orders
+            </button>
+          </h5>
+        </div>
+        <div id="collapseOne" class="collapse show" aria-labelledby="headingOne" data-parent="#accordion">
+          <div class="card-body">
+      <p class="header4">Estimate time: <%= order.estimated_time %></p>
+
+      <p class="header2">Items Ordered: <%= order.order_food %></p>
+
+        <p class="header3">Total: $<%= order.total_price %></p>
+          </div>
+
+    <div class="wait-time-form">
+      <label for="waitTime">New wait time: </label>
+      <select class="form-control" id="waitTime">
+        <option selected="selected" value="0">1 Minute</option>
+        <option value="1">5 Minutes</option>
+        <option value="2">10 Minutes</option>
+        <option value="3">15 Minutes</option>
+        <option value="4">20 Minutes</option>
+        <option value="5">25 Minutes</option>
+        <option value="6">30 Minutes</option>
+        <option value="7">35 Minutes</option>
+        <option value="8">40 Minutes</option>
+        <option value="9">45 Minutes</option>
+        <option value="10">50 Minutes</option>
+        <option value="11">55 Minutes</option>
+      </select>
+          <button type="submit" class="button1">Accept Order</button>
+        </div>
+        </form>
+      </div>
+      <div class="card">
+        <div class="card-header" id="headingTwo">
+          <h5 class="mb-0">
+            <button class="btn btn-link collapsed" data-toggle="collapse" data-target="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
+              Accepted Orders
+            </button>
+          </h5>
+        </div>
+        <div id="collapseTwo" class="collapse" aria-labelledby="headingTwo" data-parent="#accordion">
+        </div>
+      </div>
+    </div>
+  </body>
+  <!-- Bootstrap JS -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"
+    integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1"
+    crossorigin="anonymous"></script>
+  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"
+    integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM"
+    crossorigin="anonymous"></script>
+  </body>
+
+</html>
