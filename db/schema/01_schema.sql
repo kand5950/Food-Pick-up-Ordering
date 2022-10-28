@@ -31,7 +31,7 @@ CREATE TABLE orders (
   completed_at TIMESTAMP,
   accepted_at TIMESTAMP,
   total_price INTEGER NOT NULL,
-  estimated_time INTEGER,
+  estimated_time TEXT,
   user_order_id INTEGER
 );
 
