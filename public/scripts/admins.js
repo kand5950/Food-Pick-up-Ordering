@@ -23,7 +23,7 @@ $(() => {
         <h2 class="header4">New Estimated time: ${selected} min</h2>
 
         <h2 class="header2">List of items to be done: ${userOrder.order_food} </h2>
-  
+
           <h2 class="header3">Total: ${userOrder.total_price} $</h2>
       </div>
       `);
@@ -35,7 +35,7 @@ $(() => {
         method: "POST",
         data: newEstTime,
         success: function () { console.log(data) }
-  
+
       })
 
     });

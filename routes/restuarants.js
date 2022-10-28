@@ -1,6 +1,7 @@
 const express = require('express');
 const router  = express.Router();
 const ordershelper = require('../db/queries/orders')
+const twilio = require("../twilio.js");
 
 let order;
 
@@ -29,7 +30,7 @@ router.post('/', (req, res) => {
 
 router.post('/update', (req, res) => {
   ordershelper.acceptedOrder(req.body.estTime).then(newEstTime => {
-    console.log(newEstTime);
+    twilio.customerMessage(req.body.estTime);
   })
 })
 module.exports = router;
