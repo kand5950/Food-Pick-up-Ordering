@@ -5,10 +5,12 @@ Online platform where a user can log in and place an order of specificly chosen 
 ## Final Product
 Gif of app
 : Preview of app
-!["gif of app"](https://github.com/kand5950/Food-Pick-up-Ordering/blob/master/img/Food%20ordering%20app.gif)
+!["gif of app"]()
+
 Restuarant text
 : Text that restuarant recieves right as user places order
 !["Restuarant Text"](https://github.com/kand5950/Food-Pick-up-Ordering/blob/master/img/RestuarantText.png)
+
 Customer text
 : Text that customer recieves right as restuarant accepts order with a set time
 !["Customer Text"](https://github.com/kand5950/Food-Pick-up-Ordering/blob/master/img/UserText.png)
