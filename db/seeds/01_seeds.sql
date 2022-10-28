@@ -18,63 +18,63 @@ VALUES (
   'A very tasty burger!',
   1000,
   10,
-  'https://media.istockphoto.com/photos/closeup-of-a-veggie-burger-with-copy-space-picture-id1331109186'
+  'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSKfWqjrhDZ-MlTKUo2unOK6fqX957IkZr8tQ&usqp=CAU'
 ),
 (
   'Delicious Pizza',
   'An  extremely delicious pizza!',
   1000,
   10,
-  'https://media.istockphoto.com/photos/freshly-baked-pizza-with-arugula-tomato-red-onion-and-mozzarella-picture-id1279000076'
+  'https://www.pamperedchef.ca/iceberg/com/product/100251-lg.jpg'
 ),
 (
   'Amazing Taco',
   'A pretty amazing taco!',
   1000,
   10,
-  'https://media.istockphoto.com/photos/barbecue-taco-picture-id1269723824'
+  'https://www.fairmont-mayakoba.com/wp-content/uploads/2021/09/Tacos-3.jpg'
 ),
 (
-  'Cola-Coco',
+  'Coca-Cola',
   'Cold pop',
   300,
   5,
-  'https://media.istockphoto.com/photos/ice-coffee-in-a-tall-glass-over-and-coffee-beans-on-a-old-rustic-picture-id953291208?s=612x612'
+  'https://cdn.dribbble.com/userupload/3245137/file/original-eb30a94290d96f3cf3ba96726595bbcc.png?resize=400x0'
 ),
 (
   'Pepsi',
   'Cold pop',
   300,
   5,
-  'https://media.istockphoto.com/photos/double-soft-drink-carbonated-fresh-food-soda-white-dish-on-wooden-picture-id828480064?s=612x612'
+  'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQKIx2qoK1ki85wSkf7r56b00z9hd3TV5CWww&usqp=CAU'
 ),
 (
   'Root Beer',
   'Cold Pop',
   300,
   5,
-  'https://media.istockphoto.com/photos/frozen-dark-stout-beer-float-picture-id537639977?s=612x612'
+  'https://i.pinimg.com/originals/b7/b0/0f/b7b00f40039bd1a711ab49edeaf451a7.jpg'
 ),
 (
   'Fries',
   'Small cut thin potatoes fried',
   400,
   7,
-  'https://media.istockphoto.com/photos/french-fries-picture-id852412726?s=612x612'
+  'https://t3.ftcdn.net/jpg/01/70/27/56/360_F_170275666_53KCP4IuiCQEZazFAdexaRmsl7BEMQwI.jpg'
 ),
 (
   'Wedges',
   'Potatoes cut and fried',
   600,
   8,
-  'https://media.istockphoto.com/photos/potato-wedges-baked-with-rosemary-fast-food-picture-id1182303795'
+  'https://bakeplaysmile.com/wp-content/uploads/2022/02/Crispy-Potato-Wedges-2.jpg'
 ),
 (
   'Poutine',
   'Fries with gravy',
   700,
   9,
-  'https://media.istockphoto.com/photos/classic-french-canadian-poutine-picture-id154959976'
+  'https://heatz.ca/wp-content/uploads/2021/01/Shawarma-poutine.jpg'
 );
 
 
