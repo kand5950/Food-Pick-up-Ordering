@@ -20,7 +20,7 @@ $(() => {
         console.log("cliked accept")
         $("#collapseTwo").append(`
         <div class="card-body">
-        <h2 class="header4">New Estimate time: ${selected} min</h2>
+        <h2 class="header4">New Estimated time: ${selected} min</h2>
 
         <h2 class="header2">List of items to be done: ${userOrder.order_food} </h2>
   
