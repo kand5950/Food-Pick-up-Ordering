@@ -3,3 +3,46 @@ body {
   flex-direction: column;
   padding-left: 240px;
 }
+.form-control{
+  display: block;
+    /* width: 100%; */
+    height: calc(2.25rem + 2px);
+    padding: 0.375rem 0.75rem;
+    font-size: 1rem;
+    font-weight: 400;
+    line-height: 1.5;
+    color: #495057;
+    background-color: #fff;
+    background-clip: padding-box;
+    border: 1px solid #ced4da;
+    border-radius: 0.25rem;
+    transition: border-color .15s ease-in-out,box-shadow .15s ease-in-out;
+    width: 12%;
+    position: relative;
+    left: 220px;
+}
+.card-body {
+  -ms-flex: 1 1 auto;
+  flex: 1 1 auto;
+  padding: 1.25rem;
+  border: 10px solid #000000;
+  width: 39%;
+}
+.header1 ,.header2, .header3, .header4{
+  position:relative;
+  text-align: center;
+  color: gray;
+  font-family: Georgia, 'Times New Roman', Times, serif;
+  font-weight: bold;
+  font-size: 27px;
+}
+label{
+  position:relative;
+  text-align: center;
+  color: black;
+  font-family: Georgia, 'Times New Roman', Times, serif;
+  font-weight: bold;
+  font-size: 27px;
+  top: 47px;
+}
+

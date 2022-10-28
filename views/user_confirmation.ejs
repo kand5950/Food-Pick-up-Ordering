@@ -20,18 +20,21 @@
     <script>const order = '<%- JSON.stringify(order) %>'</script>
     <script src="/scripts/user_confirmation.js"></script>
   </head>
+
   <body>
     <header><%- include('partials/_header') %></header>
     <main>
-      <h1 class="header1">Order Summary</h1>
-      <h2 class="header4">Estimated time: <%= order.estimated_time %></h2>
+      <div class="border-options">
+      <p class="header1">Order Summary:</p>
+      <p class="header4">Estimated time: <%= order.estimated_time %></p>
+      <p class="header2">Meals Ordered: <%= order.order_food %></p>
+        <p class="header3">Total: $<%= order.total_price %></p>
 
-      <h2 class="header2">Meals Ordered: <%= order.order_food %></h2>
-        </div>
-        <h2 class="header3">Total: $<%= order.total_price %></h2>
-        <a type="submit" class="btn btn-primary place-order" href="/homepage">Back To shop</a>
+        <a type="submit" class="btn btn-primary place-order" href="/menu">Back To shop</a>
+      </div>
       </form>
     </main>
+
   </body>
   <!-- Bootstrap JS -->
   <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
