@@ -22,21 +22,14 @@ const createOrder = (order) => {
     return res.rows[0];
   })
 };
-// coming back to it when the timer is completed
-// const updateOrder = (order) => {
-//   const queryParams = [order.estimated_time];
-//   return db.query(`UPDATE orders SET estimated_time = $1 RETURNING *`, queryParams)
-//   .then(res => {
-//     return res.rows[0];
-//   })
-// };
-const acceptedAt = (order) => {
-  const queryParams = [order.estimated_time];
-  return db.query(`UPDATE orders SET accepted_at = CURRENT_TIMESTAMP *`, queryParams)
+
+const acceptedOrder = (estTime) => {
+  const queryParams = [estTime];
+  return db.query(`UPDATE orders SET estimated_time = $1 RETURNING *`, queryParams)
   .then(res => {
     return res.rows[0];
   })
 };
 
 
-  module.exports = { getOrders, getOrder, createOrder };
+  module.exports = { getOrders, getOrder, createOrder, acceptedOrder };

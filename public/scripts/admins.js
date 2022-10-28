@@ -14,6 +14,8 @@ $(() => {
         $("#collapseOne .card-body").empty();
 
 
+      const newEstTime = {}
+
 
         console.log("cliked accept")
         $("#collapseTwo").append(`
@@ -25,6 +27,17 @@ $(() => {
           <h2 class="header3">Total: ${userOrder.total_price} $</h2>
       </div>
       `);
+
+      newEstTime["estTime"] = selected
+
+      $.ajax({
+        url: '/restuarants/update',
+        method: "POST",
+        data: newEstTime,
+        success: function () { console.log(data) }
+  
+      })
+
     });
 
 

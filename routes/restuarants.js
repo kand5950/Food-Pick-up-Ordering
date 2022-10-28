@@ -25,7 +25,11 @@ router.post('/', (req, res) => {
     console.log(order)
   })
   // console.log(order.foods_ordered.map(function(foods) { return foods["name"]}).join(", ")) gets food from order
-  
-  
+})
+
+router.post('/update', (req, res) => {
+  ordershelper.acceptedOrder(req.body.estTime).then(newEstTime => {
+    console.log(newEstTime);
+  })
 })
 module.exports = router;

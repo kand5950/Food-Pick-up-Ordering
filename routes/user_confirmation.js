@@ -22,9 +22,8 @@ router.get('/', (req, res) => {
 
 
 router.post('/', (req, res) => { 
-  console.log("got here")
-  console.log(Number(req.session.user_id))
-  console.log(req.body)
+ 
+  console.log(req.body, "got here")
   order = {user_id: req.session.user_id, order_food: req.body.foods_ordered.map(function(foods) { return foods["name"]}).join(", "), total_price: req.body.total, estimated_time: req.body.estTime}
   ordershelper.createOrder(order).then(order => {
     return res.send('success');
