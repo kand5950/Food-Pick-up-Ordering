@@ -5,7 +5,7 @@ Online platform where a user can log in and place an order of specificly chosen 
 ## Final Product
 Gif of app
 : Preview of app
-!["gif of app"](https://github.com/kand5950/Food-Pick-up-Ordering/blob/master/img/Food%20ordering%20app%20new.gif)
+!["gif of app"](https://github.com/kand5950/Food-Pick-up-Ordering/blob/master/img/ezgif.com-gif-maker%20(2).gif)
 
 Restuarant text
 : Text that restuarant recieves right as user places order
